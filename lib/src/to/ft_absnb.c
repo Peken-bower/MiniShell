@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_absnb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omahdiou <omahdiou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aelmrabe <aelmrabe@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 02:40:56 by omahdiou          #+#    #+#             */
-/*   Updated: 2023/07/19 06:06:41 by omahdiou         ###   ########.fr       */
+/*   Created: 2023/06/14 02:19:28 by aelmrabe          #+#    #+#             */
+/*   Updated: 2023/06/22 09:08:14 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../../headers/Lib.h"
 
-int main(int ac, char **av)
+int	abs_value(int value)
 {
-    (void)av;
-    (void)ac;
-    char *line;
-    while(1)
-    {
-        line = readline("minishell % ");
-        if(line)
-            add_history(line);
-        // printf("%s\n",line);
-    }
+	if (value > 0)
+		return (value);
+	return (value * -1);
 }
